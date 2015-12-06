@@ -610,7 +610,7 @@ class CryptoCoinPriceIndicator:
     def getBitStampBTCPrice(self):
         lstBitStamp = BAD_RETRIEVE
         try :
-            web_page = urllib2.urlopen("https://www.bitstamp.net/api/ticker").read()
+            web_page = urllib2.urlopen("https://www.bitstamp.net/api/ticker/").read()
             data = json.loads(web_page)
             lstBitStamp = data['last']
         except urllib2.HTTPError :
